@@ -1,0 +1,8 @@
+{
+  "name": "LexiNegotiate AI",
+  "description": "An intelligent contract negotiation assistant for freelancers and small businesses. Analyze risks, generate counter-proposals, and navigate legal jargon with ease.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

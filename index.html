@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiNegotiate AI - Smart Contract Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        @media print {
+            body { 
+                background-color: white !important; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Hide elements that shouldn't be printed */
+            .print-hidden, 
+            header, 
+            button, 
+            input, 
+            textarea,
+            .no-print { 
+                display: none !important; 
+            }
+
+            /* Main container adjustments */
+            main {
+                margin: 0 !important;
+                padding: 10mm !important;
+                width: 100% !important;
+            }
+
+            /* Dashboard Layout for Print */
+            .grid {
+                display: block !important;
+            }
+            .lg\:col-span-4, .lg\:col-span-8, .lg\:col-span-12 {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+
+            /* Reset sticky positioning for print */
+            .sticky, .lg\:sticky {
+                position: static !important;
+            }
+
+            /* Ensure cards look good on white background */
+            .bg-slate-50, .bg-slate-100, .bg-indigo-50 {
+                background-color: #f8fafc !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+
+            .bg-slate-900 {
+                background-color: #0f172a !important;
+                color: white !important;
+            }
+
+            /* Modal Print Handling */
+            .fixed { 
+                position: static !important; 
+                background: white !important;
+                padding: 0 !important;
+                z-index: auto !important;
+                display: block !important;
+            }
+            .fixed > div {
+                box-shadow: none !important;
+                border: none !important;
+                max-height: none !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* When the modal (Editor) is open, hide the main dashboard behind it */
+            body:has(.fixed) main {
+                display: none !important;
+            }
+
+            .shadow-2xl, .shadow-xl, .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
